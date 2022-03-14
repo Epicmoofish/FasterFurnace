@@ -1,5 +1,6 @@
 package net.oceanic.fasterfurnace;
 
+import com.mojang.logging.LogUtils;
 import com.sun.jdi.BooleanValue;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.block.Block;
@@ -25,6 +26,7 @@ public class FasterFurnaceMod
 {
 
     // Directly reference a slf4j logger
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public FasterFurnaceMod()
     {
@@ -69,6 +71,7 @@ public class FasterFurnaceMod
             return rule;
         }
         catch (Exception e) {
+            FasterFurnaceMod.LOGGER.error("Create gamerule error", (Throwable)e);
             return null;
         }
     }
