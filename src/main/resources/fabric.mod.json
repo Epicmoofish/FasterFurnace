@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "fasterfurnaces",
+  "version": "${version}",
+
+  "name": "Faster Furnaces Mod",
+  "description": "This mod will speed up the smelting time of furnaces (default 20x) (fully configurable)",
+  "authors": [
+    "OceanicOxen"
+  ],
+  "contact": {
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/fasterfurnaces/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.oceanic.fasterfurnaces.FasterFurnacesMod"
+    ]
+  },
+  "mixins": [
+    "fasterfurnaces.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
